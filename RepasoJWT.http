@@ -1,0 +1,6 @@
+@RepasoJWT_HostAddress = http://localhost:5079
+
+GET {{RepasoJWT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
