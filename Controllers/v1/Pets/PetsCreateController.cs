@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepasoJWT.Models;
 using RepasoJWT.Repositories;
@@ -18,6 +19,7 @@ namespace RepasoJWT.Controllers.v1.Pets
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> AddPet(Pet pet)
         {
             await servicios.Add(pet);
