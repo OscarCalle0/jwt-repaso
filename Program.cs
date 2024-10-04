@@ -28,6 +28,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // ACA AGREGAMOS EL SERVICIO QUE NOS PERMITE TRABAJAR CON PETS
 builder.Services.AddScoped<IPetRepository, PetServices>();
+builder.Services.AddScoped<IUserRespository, UserServices>();
 
 // ACA HABILITAMOS LA OPCION QUE NOS PERMITE USAR JWT
 builder.Services.AddSingleton<JWT>();
